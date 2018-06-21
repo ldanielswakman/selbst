@@ -1,0 +1,28 @@
+#content {
+	min-height: 100vh;
+	
+	@media screen and (min-width: 480px) {
+		display: flex;
+	}
+}
+
+aside {
+	flex: 1;
+	flex-basis: 34%;
+	max-height: 100%;
+	padding: 2rem;
+	background: $greyDark;
+	color: $white;
+
+	overflow-y: scroll;
+}
+
+main {
+	position: relative;
+	flex: 1;
+	flex-basis: 66%;
+	max-height: 100%;
+	padding: 2rem;
+
+	overflow-y: scroll;
+}

@@ -18,6 +18,9 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 
 <main>
+
+	<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">Join</a>
+
 	Main panel
 </main>
 

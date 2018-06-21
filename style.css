@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Selbst
 Theme URI: https://selbst.online
@@ -70,11 +71,54 @@ body {
 aside {
   flex: 1;
   flex-basis: 34%;
+  max-height: 100%;
   padding: 2rem;
   background: #333344;
-  color: #fff; }
+  color: #fff;
+  overflow-y: scroll; }
 
 main {
+  position: relative;
   flex: 1;
   flex-basis: 66%;
-  padding: 2rem; }
+  max-height: 100%;
+  padding: 2rem;
+  overflow-y: scroll; }
+
+#menu {
+  margin-top: 5rem;
+  list-style-type: none; }
+  #menu > li {
+    counter-increment: customlistcounter; }
+  #menu > li:before {
+    float: left;
+    margin-top: 0.25rem;
+    content: "0" counter(customlistcounter) "—";
+    pointer-events: none;
+    opacity: 0.75; }
+  #menu:first-child {
+    counter-reset: customlistcounter; }
+  #menu a {
+    display: block;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    color: inherit;
+    text-decoration: none; }
+    #menu a:hover {
+      color: #FAFE8D;
+      background: rgba(0, 0, 0, 0.1); }
+
+.cta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  background: #3417AD;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 7.5rem;
+  letter-spacing: 0.1rem; }

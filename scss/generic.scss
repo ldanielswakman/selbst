@@ -2,25 +2,3 @@ body {
 	font-size: 112.5%; // 18px
 	font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
-#content {
-	min-height: 100vh;
-	
-	@media screen and (min-width: 480px) {
-		display: flex;
-	}
-}
-
-aside {
-	flex: 1;
-	flex-basis: 34%;
-	padding: 2rem;
-	background: $greyDark;
-	color: $white;
-}
-
-main {
-	flex: 1;
-	flex-basis: 66%;
-	padding: 2rem;
-}
