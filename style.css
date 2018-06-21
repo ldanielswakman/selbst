@@ -60,3 +60,21 @@ table {
 body {
   font-size: 112.5%;
   font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+#content {
+  min-height: 100vh; }
+  @media screen and (min-width: 480px) {
+    #content {
+      display: flex; } }
+
+aside {
+  flex: 1;
+  flex-basis: 34%;
+  padding: 2rem;
+  background: #333344;
+  color: #fff; }
+
+main {
+  flex: 1;
+  flex-basis: 66%;
+  padding: 2rem; }
