@@ -58,32 +58,92 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-size: 112.5%;
-  font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1 {
+  font-size: 2.5rem;
+  color: #3417AD; }
+
+blockquote {
+  position: relative;
+  margin-left: -2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  padding-right: 0; }
+  blockquote p {
+    position: relative;
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-style: italic;
+    color: #3417AD; }
+  blockquote cite {
+    font-size: 1.5rem; }
+    blockquote cite:before {
+      content: "— "; }
+  blockquote:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 12rem;
+    background: #FAFE8D; }
+
+p {
+  font-family: "IBM Plex Serif";
+  font-size: 100%;
+  line-height: 2rem;
+  color: rgba(51, 51, 68, 0.8); }
+  p + p {
+    margin-top: 1rem; }
+
+hr {
+  margin: 4rem -2rem;
+  border: 1px solid rgba(51, 51, 68, 0.1); }
+  @media screen and (min-width: 30rem) {
+    hr {
+      margin-right: -8rem; } }
 
 #content {
   min-height: 100vh; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 30rem) {
     #content {
       display: flex; } }
 
 aside {
   flex: 1;
-  flex-basis: 34%;
-  max-height: 100%;
+  flex-basis: 28%;
+  max-height: 100vh;
   padding: 2rem;
   background: #333344;
-  color: #fff;
-  overflow-y: scroll; }
+  color: #fff; }
+  @media screen and (min-width: 30rem) {
+    aside {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; } }
 
 main {
   position: relative;
   flex: 1;
-  flex-basis: 66%;
-  max-height: 100%;
-  padding: 2rem;
-  overflow-y: scroll; }
+  flex-basis: 72%;
+  max-height: 100vh;
+  padding: 2rem; }
+  @media screen and (min-width: 30rem) {
+    main {
+      padding-right: 8rem;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; } }
+  main .main__title {
+    margin-top: 8rem;
+    margin-bottom: 2rem; }
 
 #menu {
   margin-top: 5rem;

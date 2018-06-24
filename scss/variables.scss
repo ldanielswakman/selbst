@@ -7,3 +7,17 @@ $yellow: #FAFE8D;
 $white: #fff;
 $greyDark: #333344;
 $black: #000;
+
+
+// Font
+$sans: "HK Grotesk", -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: "IBM Plex Serif";
+
+
+
+// Mixins
+@mixin tabletAndUp() {
+  @media screen and (min-width: 30rem) {
+    @content;
+  }
+}

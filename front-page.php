@@ -21,10 +21,6 @@ get_header(); ?>
 
 	<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">Join</a>
 
-	<div class="main__title">
-		<h1><? the_title(); ?></h1>
-	</div>
-
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 		the_content();
 		endwhile; else: ?>

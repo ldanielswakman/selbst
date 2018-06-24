@@ -1,28 +1,41 @@
 #content {
 	min-height: 100vh;
 	
-	@media screen and (min-width: 480px) {
+	@include tabletAndUp() {
 		display: flex;
 	}
 }
 
 aside {
 	flex: 1;
-	flex-basis: 34%;
-	max-height: 100%;
+	flex-basis: 28%;
+	max-height: 100vh;
 	padding: 2rem;
 	background: $greyDark;
 	color: $white;
-
-	overflow-y: scroll;
+	
+	@include tabletAndUp() {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 main {
 	position: relative;
 	flex: 1;
-	flex-basis: 66%;
-	max-height: 100%;
+	flex-basis: 72%;
+	max-height: 100vh;
 	padding: 2rem;
 
-	overflow-y: scroll;
+	@include tabletAndUp() {
+		padding-right: 8rem;
+
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.main__title {
+		margin-top: 8rem;
+		margin-bottom: 2rem;
+	}
 }
