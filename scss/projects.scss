@@ -1,0 +1,58 @@
+.projects-title {
+	margin-top: 3rem;
+}
+
+.projects {
+	margin-top: 3rem;
+
+	figure {
+		position: relative;
+		width: 100%;
+		padding-top: 62.5%;
+		background: lighten($greyDark, 70%);
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&.figure--empty {
+			background: $blue;
+			color: $yellow;
+
+			.placeholder {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				font-size: 1.5rem;
+			}
+		}	
+	}
+	a {
+		display: block;
+		margin-bottom: 2rem;
+		text-decoration: none;
+		color: $greyDark;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+	h4 {
+		margin-top: 0.5rem;
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+}

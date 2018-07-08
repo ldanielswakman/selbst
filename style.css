@@ -65,10 +65,18 @@ table {
 
 body {
   font-size: 112.5%;
-  font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 h1 {
   font-size: 2.5rem;
+  color: #3417AD; }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #3417AD; }
 
 blockquote {
@@ -98,7 +106,7 @@ blockquote {
     background: #FAFE8D; }
 
 p {
-  font-family: "IBM Plex Serif";
+  font-family: "IBM Plex Serif", Georgia, serif;
   font-size: 100%;
   line-height: 2rem;
   color: rgba(51, 51, 68, 0.8); }
@@ -112,6 +120,45 @@ hr {
     hr {
       margin-right: -8rem; } }
 
+.home main {
+  padding-top: 20rem; }
+
+.page-name--join {
+  background: #FAFE8D; }
+  .page-name--join p {
+    color: rgba(51, 51, 68, 0.9); }
+
+.sidebar-quote {
+  margin-bottom: 0; }
+  .sidebar-quote p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #FAFE8D; }
+  .sidebar-quote::before {
+    display: none; }
+
+.sidebar-footer {
+  margin: 6rem -2rem -2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.25); }
+  .sidebar-footer a {
+    color: inherit;
+    text-decoration: none; }
+    .sidebar-footer a:hover {
+      border-bottom: 1px solid currentColor; }
+
+.main-footer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin: 6rem -2rem -2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.1); }
+  @media screen and (min-width: 30rem) {
+    .main-footer {
+      margin-right: -6rem; } }
+
 #content {
   min-height: 100vh; }
   @media screen and (min-width: 30rem) {
@@ -120,7 +167,7 @@ hr {
 
 aside {
   flex: 1;
-  flex-basis: 28%;
+  flex-basis: 33%;
   max-height: 100vh;
   padding: 2rem;
   background: #333344;
@@ -133,7 +180,7 @@ aside {
 main {
   position: relative;
   flex: 1;
-  flex-basis: 72%;
+  flex-basis: 67%;
   max-height: 100vh;
   padding: 2rem; }
   @media screen and (min-width: 30rem) {
@@ -146,7 +193,7 @@ main {
     margin-bottom: 2rem; }
 
 #menu {
-  margin-top: 5rem;
+  margin-top: 1rem;
   list-style-type: none; }
   #menu > li {
     counter-increment: customlistcounter; }
@@ -168,6 +215,32 @@ main {
       color: #FAFE8D;
       background: rgba(0, 0, 0, 0.1); }
 
+.card {
+  margin: 2rem 0;
+  background: #fff;
+  padding: 1.5rem;
+  font-size: 1rem; }
+  .card img {
+    max-width: 4rem;
+    margin: 0 auto; }
+  .card h4 {
+    margin: 1rem 0 2rem;
+    color: #3417AD;
+    font-weight: bold;
+    font-size: 1.5rem; }
+  .card p, .card ul {
+    line-height: 1.5rem; }
+  .card__cta {
+    display: block;
+    margin: 1rem -1.5rem -1.5rem;
+    background: #3417AD;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none; }
+
 .cta {
   position: absolute;
   top: 0;
@@ -182,3 +255,71 @@ main {
   text-transform: uppercase;
   line-height: 7.5rem;
   letter-spacing: 0.1rem; }
+
+.sidebar-items {
+  padding-top: 2rem; }
+  .sidebar-items .item {
+    margin: 1rem 0 3rem; }
+  .sidebar-items h4 {
+    font-weight: 600;
+    opacity: 0.4; }
+  .sidebar-items h3 {
+    margin-bottom: 0.5rem;
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: inherit; }
+  .sidebar-items p, .sidebar-items a {
+    color: inherit;
+    text-decoration: none;
+    line-height: 1.75rem; }
+  .sidebar-items a.read-more {
+    opacity: 0.4; }
+    .sidebar-items a.read-more:hover {
+      opacity: 1; }
+
+.projects-title {
+  margin-top: 3rem; }
+
+.projects {
+  margin-top: 3rem; }
+  .projects figure {
+    position: relative;
+    width: 100%;
+    padding-top: 62.5%;
+    background: #ececf0;
+    overflow: hidden; }
+    .projects figure img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .projects figure.figure--empty {
+      background: #3417AD;
+      color: #FAFE8D; }
+      .projects figure.figure--empty .placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem; }
+  .projects a {
+    display: block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #333344; }
+    .projects a:hover {
+      color: #3417AD; }
+  .projects h4 {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1.25rem; }

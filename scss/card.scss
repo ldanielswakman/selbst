@@ -1,0 +1,32 @@
+.card {
+	margin: 2rem 0;
+	background: $white;
+	padding: 1.5rem;
+	font-size: 1rem;
+
+	img {
+		max-width: 4rem;
+		margin: 0 auto;
+	}
+	h4 {
+		margin: 1rem 0 2rem;
+		color: $blue;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	p, ul {
+		line-height: 1.5rem;
+	}
+
+	&__cta {
+		display: block;
+		margin: 1rem -1.5rem -1.5rem;
+		background: $blue;
+		color: $white;
+		padding: 1rem 1.5rem;
+		text-align: center;
+		font-family: $sans;
+		font-size: 1.25rem;
+		text-decoration: none;
+	}
+}

@@ -6,9 +6,11 @@
 	}
 }
 
+$sidebar_width: 33%;
+
 aside {
 	flex: 1;
-	flex-basis: 28%;
+	flex-basis: $sidebar_width;
 	max-height: 100vh;
 	padding: 2rem;
 	background: $greyDark;
@@ -18,12 +20,14 @@ aside {
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
+
+	// See sidebar-items.scss
 }
 
 main {
 	position: relative;
 	flex: 1;
-	flex-basis: 72%;
+	flex-basis: 100% - $sidebar_width;
 	max-height: 100vh;
 	padding: 2rem;
 
