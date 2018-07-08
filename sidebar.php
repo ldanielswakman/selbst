@@ -26,7 +26,7 @@
 	<?
 	// Menu
 	wp_nav_menu([
-		'menu_id' => 'menu',
+		'menu' => 'Primary Menu',
 		'items_wrap' => '<ol id="%1$s" class="%2$s">%3$s</ol>'
 	]);
 	?>
@@ -38,41 +38,44 @@
 		$menu_items = get_menu_items('main');
 		$n = 0;
 		
-		if(isset($menu_items)) {
-	    foreach ($menu_items as $key => $menu_item ) {
+		if(isset($menu_items)) :
+	    foreach ($menu_items as $key => $menu_item ) :
 	    	$id = $menu_item->object_id;
 	    	$page = get_post($id);
 	    	$meta = get_post_meta($id);
       	$n++;
-      	?>
 
-	      <div class="item">
+      	if(strlen($meta['summary_title'][0]) > 0 && strlen($meta['summary'][0]) > 0) :
+	      	?>
 
-	      	<h4>0<?= $n ?>—<?= $page->post_title ?></h4>
+		      <div class="item">
 
-		      <? if(strlen($meta['summary_title'][0]) > 0) : ?>
-		      	<h3><?= $meta['summary_title'][0] ?></h3>
-		      <? endif ?>
+		      	<h4>0<?= $n ?>—<?= $page->post_title ?></h4>
 
-		      <? if(strlen($meta['summary'][0]) > 0) : ?>
-		      	<p><?= $meta['summary'][0] ?></p>
-		      <? endif ?>
+			      <? if(strlen($meta['summary_title'][0]) > 0) : ?>
+			      	<h3><?= $meta['summary_title'][0] ?></h3>
+			      <? endif ?>
 
-	      	<? if ($id != get_the_id()) : ?>
-	      		<a class="read-more" href="<?= get_permalink($id) ?>">&mdash;Read more</a>
-		      <? else : ?>
-		      	<h4>See here ————></h4>
-		      <? endif ?>
+			      <? if(strlen($meta['summary'][0]) > 0) : ?>
+			      	<p><?= $meta['summary'][0] ?></p>
+			      <? endif ?>
 
-	      </div>
+		      	<? if ($id != get_the_id()) : ?>
+		      		<a class="read-more" href="<?= get_permalink($id) ?>">&mdash;Read more</a>
+			      <? else : ?>
+			      	<h4>See here ————></h4>
+			      <? endif ?>
 
-      	<?
-	    }
-	  }
+		      </div>
+
+	      	<?
+      	endif;
+	    endforeach;
+	  endif;
 		?>
 	</div>
 
-	<div class="sidebar-footer">
+	<div class="sidebar__footer">
 		&copy; Selbst 2018 — <a href="https://ldaniel.eu" target="_blank">website by ldaniel.eu</a>
 	</div>
 

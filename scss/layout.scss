@@ -3,6 +3,7 @@
 	
 	@include tabletAndUp() {
 		display: flex;
+		align-items: stretch;
 	}
 }
 
@@ -26,14 +27,15 @@ aside {
 
 main {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	flex: 1;
 	flex-basis: 100% - $sidebar_width;
-	max-height: 100vh;
-	padding: 2rem;
+	height: 100vh;
+	padding: 0;
 
 	@include tabletAndUp() {
-		padding-right: 8rem;
-
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -41,5 +43,47 @@ main {
 	.main__title {
 		margin-top: 8rem;
 		margin-bottom: 2rem;
+	}
+	.main__content {
+		flex: 0;
+		padding: 2rem;
+
+		@include tabletAndUp() {
+			padding-right: 8rem;
+		}
+	}
+	// Main footer
+	.main__footer {
+		// display: flex;
+		// flex: 0;
+		width: 100%;
+		padding: 1.5rem 2rem;
+		background: $yellow;
+
+		@include tabletAndUp() {
+			// margin-right: -6rem;
+		}
+	}
+}
+.home main .main__content {
+	padding: 20rem 2rem 2rem;
+}
+
+
+
+// Sidebar footer
+.sidebar__footer {
+	margin: 6rem -2rem -2rem;
+	padding: 1.5rem 2rem;
+	background: rgba($black, 0.1);
+	color: rgba($white, 0.25);
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			 border-bottom: 1px solid currentColor;
+		}
 	}
 }

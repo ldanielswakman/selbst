@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-moz-selection {
+  background-color: $yellow;
+  color: $blue;
+}
+::selection {
+  background-color: $yellow;
+  color: $blue;
+}
+
 
 h1 {
 	font-size: 2.5rem;
@@ -75,15 +84,14 @@ hr {
 
 
 // TMP: page-specific
-.home main {
-	padding-top: 20rem;
-}
-
 .page-name--join {
 	background: $yellow;
 
 	p {
 		color: rgba($greyDark, 0.9);
+	}
+	.main__footer {
+		border-top: 1px solid darken($yellow, 30%);
 	}
 }
 
@@ -92,6 +100,7 @@ hr {
 // Sidebar quote
 .sidebar-quote {
 	margin-bottom: 0;
+	
 	p {
 		font-size: 1.5rem;
 		line-height: 1.75rem;
@@ -99,38 +108,5 @@ hr {
 	}
 	&::before {
 		display: none;
-	}
-}
-
-
-// Sidebar footer
-.sidebar-footer {
-	margin: 6rem -2rem -2rem;
-	padding: 1.5rem 2rem;
-	background: rgba($black, 0.1);
-	color: rgba($white, 0.25);
-
-	a {
-		color: inherit;
-		text-decoration: none;
-
-		&:hover {
-			 border-bottom: 1px solid currentColor;
-		}
-	}
-}
-
-
-// Main footer
-.main-footer {
-	display: flex;
-	flex: 1;
-	width: 100%;
-	margin: 6rem -2rem -2rem;
-	padding: 1.5rem 2rem;
-	background: rgba($black, 0.1);
-
-	@include tabletAndUp() {
-		margin-right: -6rem;
 	}
 }

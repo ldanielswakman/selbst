@@ -11,7 +11,8 @@ function get_menu_items($menu_name){
 function twentyseventeen_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'main'    => __( 'Main Menu', 'selbst' )
+		'main'    => __( 'Sidebar Menu', 'selbst' ),
+		'footer'  => __( 'Footer Menu', 'selbst' )
 	) );
 }
 add_action( 'after_setup_theme', 'twentyseventeen_setup' );

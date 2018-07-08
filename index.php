@@ -19,23 +19,25 @@ get_header(); ?>
 
 <main>
 
-	<? if($post->post_name != 'join') : ?>
-		<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">Join</a>
-	<? endif ?>
+	<div class="main__content">
 
-	<div class="main__title">
-		<h1><? the_title(); ?></h1>
+		<? if($post->post_name != 'join') : ?>
+			<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">Join</a>
+		<? endif ?>
+
+		<div class="main__title">
+			<h1><? the_title(); ?></h1>
+		</div>
+
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+			the_content();
+			endwhile; else: ?>
+			<p>Sorry, no posts matched your criteria.</p>
+		<?php endif; ?>
+
 	</div>
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
-		the_content();
-		endwhile; else: ?>
-		<p>Sorry, no posts matched your criteria.</p>
-	<?php endif; ?>
-
-	<div class="main-footer">
-		&copy; Selbst 2018 — <a href="https://ldaniel.eu" target="_blank">website by ldaniel.eu</a>
-	</div>
+	<? get_template_part('partials/footer-main') ?>
 
 </main>
 
