@@ -1,0 +1,46 @@
+.nf-field-container {
+	margin-top: 1rem;
+
+	&.label-above .nf-field-label {
+		position: relative;
+		z-index: 2;
+		margin: 0;
+		padding: 0.25rem 0.5rem;
+		font-size: 0.875rem;
+
+		label {
+			opacity: 0.25;
+		}
+	}
+
+	&.label-above .nf-field-element {
+		margin-top: -1.5rem;
+	}
+
+	.ninja-forms-field {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		background: $white;
+		border: none;
+		padding: 1.25rem 0.5rem 1rem;
+
+		font: inherit;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.nf-error-msg {
+		font-size: 0.875rem;
+	}
+
+	.submit-wrap .nf-field-element {
+		input[type="button"]:not([disabled]) {
+			background: $blue;
+			color: $white;
+		}
+	}
+}

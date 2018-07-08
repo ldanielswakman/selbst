@@ -133,7 +133,10 @@ hr {
   .page-name--join p {
     color: rgba(51, 51, 68, 0.9); }
   .page-name--join .main__footer {
-    border-top: 1px solid #e7f002; }
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.page-name--contact {
+  background: #EAEAEC; }
 
 .sidebar-quote {
   margin-bottom: 0; }
@@ -158,10 +161,28 @@ aside {
   padding: 2rem;
   background: #333344;
   color: #fff; }
+  aside .logo {
+    display: block; }
+    aside .logo img {
+      display: block;
+      max-width: 100%;
+      max-height: 4rem;
+      margin: -1rem -0.5rem; }
+      @media screen and (min-width: 30rem) {
+        aside .logo img {
+          max-height: 6rem;
+          margin: 0; } }
   @media screen and (min-width: 30rem) {
     aside {
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch; } }
+  aside .sidebar__content,
+  aside .sidebar__footer {
+    display: none; }
+    @media screen and (min-width: 30rem) {
+      aside .sidebar__content,
+      aside .sidebar__footer {
+        display: block; } }
 
 main {
   position: relative;
@@ -177,7 +198,7 @@ main {
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch; } }
   main .main__title {
-    margin-top: 8rem;
+    margin-top: 8.5rem;
     margin-bottom: 2rem; }
   main .main__content {
     flex: 0;
@@ -228,8 +249,10 @@ main {
       background: rgba(0, 0, 0, 0.1); }
 
 .menu-full-menu-container ul {
-  display: flex;
   margin: 0 -0.5rem; }
+  @media screen and (min-width: 30rem) {
+    .menu-full-menu-container ul {
+      display: flex; } }
   .menu-full-menu-container ul li a {
     display: block;
     margin: -1rem 0;
@@ -284,6 +307,34 @@ main {
   text-transform: uppercase;
   line-height: 7.5rem;
   letter-spacing: 0.1rem; }
+
+.nf-field-container {
+  margin-top: 1rem; }
+  .nf-field-container.label-above .nf-field-label {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem; }
+    .nf-field-container.label-above .nf-field-label label {
+      opacity: 0.25; }
+  .nf-field-container.label-above .nf-field-element {
+    margin-top: -1.5rem; }
+  .nf-field-container .ninja-forms-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border: none;
+    padding: 1.25rem 0.5rem 1rem;
+    font: inherit; }
+    .nf-field-container .ninja-forms-field:focus {
+      outline: none; }
+  .nf-field-container .nf-error-msg {
+    font-size: 0.875rem; }
+  .nf-field-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]) {
+    background: #3417AD;
+    color: #fff; }
 
 .sidebar-items {
   padding-top: 2rem; }

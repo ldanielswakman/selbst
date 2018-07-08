@@ -27,8 +27,11 @@
 }
 
 .menu-full-menu-container ul {
-	display: flex;
 	margin: 0 -0.5rem;
+
+	@include tabletAndUp() {
+		display: flex;
+	}
 
 	li a {
 		display: block;
