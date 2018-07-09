@@ -12,7 +12,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <? language_attributes(); ?> class="no-js no-svg">
+<html <? language_attributes(); ?>>
 <head>
 <meta charset="<? bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,15 +20,11 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css" />
 <link href="<?= get_template_directory_uri() ?>/style.css" rel="stylesheet" type="text/css" />
 
+<script src="<?= get_template_directory_uri() ?>/js/jquery-3.3.1.min.js"></script>
+<script src="<?= get_template_directory_uri() ?>/js/scripts.js"></script>
+
 <? wp_head(); ?>
 </head>
 
 <body <? body_class('page-name--' . $post->post_name ); ?>>
-<div id="page">
-
-	<header id="masthead" class="site-header" role="banner">
-
-	</header>
-
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+<div id="content" class="site-content">

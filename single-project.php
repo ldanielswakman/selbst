@@ -19,20 +19,22 @@ get_header(); ?>
 
 <main>
 
-	<? if($post->post_name != 'join') : ?>
-		<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">
-			<? if(wp_get_post_parent_id( $post->ID ) > 0) : ?>
-				<img src="<?= get_template_directory_uri() ?>/images/cross.svg" title="Back to Projects" alt="Back to Projects" />
-			<? else : ?>
-				Join
-			<? endif ?>
-		</a>
-	<? endif ?>
+	<a href="<?= get_permalink(get_page_by_path('projects')) ?>" class="cta">
+		<img src="<?= get_template_directory_uri() ?>/images/cross.svg" title="Back to Projects" alt="Back to Projects" />
+	</a>
+
+	<figure class="main__project-cover-image">
+		<?
+		$cover_img_id = get_post_meta($post->ID)['cover_image'][0];
+		if (strlen($cover_img_id > 0)) : ?>
+			<img src="<?= wp_get_attachment_image_src($cover_img_id, 'large')[0] ?>" alt="<?= $p->post_title ?>" />
+		<? endif; ?>
+		
+	</figure>
 
 	<div class="main__content">
 
-		<div class="main__title">
-
+		<div class="main__project-title">
 			<h1><? the_title(); ?></h1>
 		</div>
 

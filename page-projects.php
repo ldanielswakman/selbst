@@ -19,22 +19,19 @@ get_header(); ?>
 
 <main>
 
-	<? if($post->post_name != 'join') : ?>
-		<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">
-			<? if(wp_get_post_parent_id( $post->ID ) > 0) : ?>
-				<img src="<?= get_template_directory_uri() ?>/images/cross.svg" title="Back to Projects" alt="Back to Projects" />
-			<? else : ?>
-				Join
-			<? endif ?>
-		</a>
-	<? endif ?>
-
 	<div class="main__content">
 
-		<div class="main__title">
+		<? if($post->post_type == 'project') : ?>
+			<a href="<?= get_permalink(get_page_by_path('projects')) ?>" class="cta">X</a>
+		<? elseif($post->post_name != 'join') : ?>
+			<a href="<?= get_permalink(get_page_by_path('join')) ?>" class="cta">Join</a>
+		<? endif ?>
 
+		<div class="main__title">
 			<h1><? the_title(); ?></h1>
 		</div>
+
+		<? get_template_part('partials/projects') ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 			the_content();

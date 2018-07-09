@@ -11,14 +11,7 @@
  * @version 1.0
  */
 ?>
-
-				</div><!-- #content -->
-
-				<footer id="colophon" class="site-footer" role="contentinfo">
-				</footer>
-
-			</div><!-- .site-content-contain -->
-		</div><!-- #page -->
+		</div><!-- #content -->
 
 	<? wp_footer() ?>
 
