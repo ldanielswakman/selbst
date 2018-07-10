@@ -36,10 +36,10 @@ get_header(); ?>
 		<? get_template_part('partials/projects') ?>
 
 	</div>
-
-	<? get_template_part('partials/action-box') ?>
-
-	<? get_template_part('partials/newsletter-box') ?>
+ 
+	<? if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Boxes") ) : ?>
+		<? dynamic_sidebar('sidebar-1'); ?>
+	<? endif;?>
 
 	<? get_template_part('partials/footer-main') ?>
 

@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * The main template file
  *
@@ -15,7 +15,7 @@
  */
 get_header(); ?>
 
-<?php get_sidebar(); ?>
+<? get_sidebar(); ?>
 
 <main>
 
@@ -36,22 +36,20 @@ get_header(); ?>
 			<h1><? the_title(); ?></h1>
 		</div>
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+		<? if ( have_posts() ) : while ( have_posts() ) : the_post();
 			the_content();
 			endwhile; else: ?>
 			<p>Sorry, no posts matched your criteria.</p>
-		<?php endif; ?>
+		<? endif; ?>
 
 	</div>
-
-	<? if($post->post_name != 'join') : ?>
-		<? get_template_part('partials/action-box') ?>
-	<? endif ?>
-
-	<? get_template_part('partials/newsletter-box') ?>
+ 
+	<? if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Boxes") ) : ?>
+		<? dynamic_sidebar('sidebar-1'); ?>
+	<? endif;?>
 
 	<? get_template_part('partials/footer-main') ?>
 
 </main>
 
-<?php get_footer();
+<? get_footer();

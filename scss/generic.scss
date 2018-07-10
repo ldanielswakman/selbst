@@ -126,8 +126,9 @@ hr {
 }
 
 
-// Action box
-.action-box {
+// 'Join' Action box
+.action-box,
+.widget#custom_html-3 {
 	padding: 4rem 2rem 0;
 	background: $blue;
 	color: $white;
@@ -160,7 +161,8 @@ hr {
 }
 
 // Newsletter box
-.newsletter-box {
+.newsletter-box,
+.widget#custom_html-4 {
 	padding: 4rem 2rem;
 	background: $greyLighter;
 

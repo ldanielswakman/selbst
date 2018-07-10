@@ -40,12 +40,10 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div>
-
-	<? if($post->post_name != 'join') : ?>
-		<? get_template_part('partials/action-box') ?>
-	<? endif ?>
-
-	<? get_template_part('partials/newsletter-box') ?>
+ 
+	<? if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Boxes") ) : ?>
+		<? dynamic_sidebar('sidebar-1'); ?>
+	<? endif;?>
 
 	<? get_template_part('partials/footer-main') ?>
 

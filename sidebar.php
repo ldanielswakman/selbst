@@ -32,8 +32,6 @@
 		]);
 		?>
 
-		<? dynamic_sidebar( 'sidebar-1' ); ?>
-
 		<div class="sidebar-items">
 			<?
 			$menu_items = get_menu_items('main');

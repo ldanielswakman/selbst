@@ -153,22 +153,29 @@ hr {
   .sidebar-quote::before {
     display: none; }
 
-.action-box {
+.action-box,
+.widget#custom_html-3 {
   padding: 4rem 2rem 0;
   background: #3417AD;
   color: #fff; }
-  .action-box h3, .action-box p {
+  .action-box h3, .action-box p,
+  .widget#custom_html-3 h3,
+  .widget#custom_html-3 p {
     color: #fff; }
-  .action-box h3 {
+  .action-box h3,
+  .widget#custom_html-3 h3 {
     margin-bottom: 1rem; }
-  .action-box p {
+  .action-box p,
+  .widget#custom_html-3 p {
     max-width: 40rem;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5rem; }
-  .action-box p.yellow {
+  .action-box p.yellow,
+  .widget#custom_html-3 p.yellow {
     color: #FAFE8D;
     font-weight: 600; }
-  .action-box .button {
+  .action-box .button,
+  .widget#custom_html-3 .button {
     display: inline-block;
     margin-top: 2rem;
     padding: 1.5rem 2rem;
@@ -177,23 +184,30 @@ hr {
     font-weight: 600;
     text-decoration: none; }
 
-.newsletter-box {
+.newsletter-box,
+.widget#custom_html-4 {
   padding: 4rem 2rem;
   background: #EAEAEC; }
-  .newsletter-box h3 {
+  .newsletter-box h3,
+  .widget#custom_html-4 h3 {
     margin-bottom: 1rem; }
-  .newsletter-box p {
+  .newsletter-box p,
+  .widget#custom_html-4 p {
     max-width: 40rem;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem; }
-  .newsletter-box .formbox-title-1072544 {
+  .newsletter-box .formbox-title-1072544,
+  .widget#custom_html-4 .formbox-title-1072544 {
     display: none; }
-  .newsletter-box .formbox-editor-1072544 {
+  .newsletter-box .formbox-editor-1072544,
+  .widget#custom_html-4 .formbox-editor-1072544 {
     width: 100% !important;
     padding: 0; }
   .newsletter-box button,
-  .newsletter-box input {
+  .newsletter-box input,
+  .widget#custom_html-4 button,
+  .widget#custom_html-4 input {
     border-color: transparent !important;
     font: inherit !important;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
