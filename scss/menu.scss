@@ -1,11 +1,10 @@
 .menu-primary-menu-container ol {
-	margin-top: 1rem;
 	list-style-type: none;
 
 	& > li { counter-increment: customlistcounter; }
 	& > li:before { 
 		float: left;
-		margin-top: 0.25rem;
+		margin-top: 0.5rem;
 		content: "0" counter(customlistcounter) "—";
 		pointer-events: none;
 		opacity: 0.75;
@@ -14,8 +13,7 @@
 
 	a {
 		display: block;
-		margin-bottom: 0.25rem;
-		padding: 0.25rem 0.5rem;
+		padding: 0.5rem;
 		color: inherit;
 		text-decoration: none;
 

@@ -52,7 +52,7 @@ aside {
 body {
 	// aside > * {
 	// 	transition: all 0.6s ease-in-out;
-	// 	transform: translateX(-2rem);
+	// 	transform: translateX(-1rem);
 	// 	opacity: 0;
 	// }
 	main > * {
@@ -62,7 +62,7 @@ body {
 	}
 	&.isLoaded aside > *,
 	&.isLoaded main > * {
-		transform: translateY(0);
+		transform: translate(0, 0);
 		opacity: 1;
 	}
 }

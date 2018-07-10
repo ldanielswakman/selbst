@@ -187,18 +187,16 @@ hr {
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem; }
+  .newsletter-box .formbox-title-1072544 {
+    display: none; }
+  .newsletter-box .formbox-editor-1072544 {
+    width: 100% !important;
+    padding: 0; }
+  .newsletter-box button,
   .newsletter-box input {
-    display: block;
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #fff;
-    border: none;
-    padding: 1.25rem 0.5rem 1rem;
-    font: inherit; }
-    .newsletter-box input:focus {
-      outline: none; }
+    border-color: transparent !important;
+    font: inherit !important;
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 #content {
   min-height: 100vh; }
@@ -244,7 +242,7 @@ body main > * {
 
 body.isLoaded aside > *,
 body.isLoaded main > * {
-  transform: translateY(0);
+  transform: translate(0, 0);
   opacity: 1; }
 
 main {
@@ -300,13 +298,12 @@ main {
       border-bottom: 1px solid currentColor; }
 
 .menu-primary-menu-container ol {
-  margin-top: 1rem;
   list-style-type: none; }
   .menu-primary-menu-container ol > li {
     counter-increment: customlistcounter; }
   .menu-primary-menu-container ol > li:before {
     float: left;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     content: "0" counter(customlistcounter) "—";
     pointer-events: none;
     opacity: 0.75; }
@@ -314,8 +311,7 @@ main {
     counter-reset: customlistcounter; }
   .menu-primary-menu-container ol a {
     display: block;
-    margin-bottom: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem;
     color: inherit;
     text-decoration: none; }
     .menu-primary-menu-container ol a:hover {
