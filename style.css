@@ -185,29 +185,36 @@ hr {
     text-decoration: none; }
 
 .newsletter-box,
-.widget#custom_html-4 {
+.widget#custom_html-4,
+.widget#custom_html-5 {
   padding: 4rem 2rem;
   background: #EAEAEC; }
   .newsletter-box h3,
-  .widget#custom_html-4 h3 {
+  .widget#custom_html-4 h3,
+  .widget#custom_html-5 h3 {
     margin-bottom: 1rem; }
   .newsletter-box p,
-  .widget#custom_html-4 p {
+  .widget#custom_html-4 p,
+  .widget#custom_html-5 p {
     max-width: 40rem;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem; }
   .newsletter-box .formbox-title-1072544,
-  .widget#custom_html-4 .formbox-title-1072544 {
+  .widget#custom_html-4 .formbox-title-1072544,
+  .widget#custom_html-5 .formbox-title-1072544 {
     display: none; }
   .newsletter-box .formbox-editor-1072544,
-  .widget#custom_html-4 .formbox-editor-1072544 {
+  .widget#custom_html-4 .formbox-editor-1072544,
+  .widget#custom_html-5 .formbox-editor-1072544 {
     width: 100% !important;
     padding: 0; }
   .newsletter-box button,
   .newsletter-box input,
   .widget#custom_html-4 button,
-  .widget#custom_html-4 input {
+  .widget#custom_html-4 input,
+  .widget#custom_html-5 button,
+  .widget#custom_html-5 input {
     border-color: transparent !important;
     font: inherit !important;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
