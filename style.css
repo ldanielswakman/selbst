@@ -220,12 +220,17 @@ hr {
       align-items: stretch; } }
 
 aside {
+  position: relative;
   flex: 1;
   flex-basis: 33%;
   max-height: 100vh;
   padding: 2rem;
   background: #333344;
   color: #fff; }
+  @media screen and (min-width: 30rem) {
+    aside {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; } }
   aside .logo {
     display: block; }
     aside .logo img {
@@ -237,10 +242,23 @@ aside {
         aside .logo img {
           max-height: 6rem;
           margin: 0; } }
-  @media screen and (min-width: 30rem) {
-    aside {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch; } }
+  aside .toggle-aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 2.5rem 1.5rem 2rem; }
+    aside .toggle-aside img {
+      width: 2rem;
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out; }
+    aside .toggle-aside:hover img {
+      opacity: 0.8; }
+    @media screen and (min-width: 30rem) {
+      aside .toggle-aside {
+        display: none; } }
+  aside.isExpanded .toggle-aside img {
+    transform: rotate(180deg); }
   aside .sidebar__content,
   aside .sidebar__footer {
     display: none; }
@@ -248,6 +266,10 @@ aside {
       aside .sidebar__content,
       aside .sidebar__footer {
         display: block; } }
+  aside.isExpanded .sidebar__content,
+  aside.isExpanded .sidebar__footer {
+    display: block;
+    max-height: auto; }
 
 body main > * {
   transition: all 0.3s ease-in-out;
@@ -274,8 +296,11 @@ main {
       -webkit-overflow-scrolling: touch; } }
   main .main__project-cover-image {
     flex: 1;
-    min-height: 30vw;
+    min-height: 14rem;
     background: #FAFE8D; }
+    @media screen and (min-width: 30rem) {
+      main .main__project-cover-image {
+        min-height: 30vw; } }
     main .main__project-cover-image img {
       width: 100%;
       height: 100%;
@@ -298,7 +323,10 @@ main {
     background: #FAFE8D; }
 
 .home main .main__content {
-  padding: 20rem 2rem 2rem; }
+  padding-top: 8rem; }
+  @media screen and (min-width: 30rem) {
+    .home main .main__content {
+      padding: 20rem 2rem 2rem; } }
 
 .sidebar__footer {
   margin: 6rem -2rem -2rem;
@@ -403,22 +431,44 @@ main {
       height: 7.5rem;
       line-height: 5.5rem; }
       .cta img {
-        max-height: 5.5rem;
-        margin-top: 1rem; } }
+        max-height: 4rem;
+        margin-top: 0.75rem; } }
 
-.nf-field-container {
+.nf-form-wrap {
+  margin-top: 3rem; }
+
+.nf-field-container.label-above .nf-field-label label {
+  font-size: 0.875rem;
+  opacity: 0.25; }
+
+.nf-field-container.label-above .nf-field-description {
+  order: 20; }
+  .nf-field-container.label-above .nf-field-description p {
+    font-size: 1rem;
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.nf-field-container.textbox-container,
+.nf-field-container.number-container,
+.nf-field-container.textarea-container,
+.nf-field-container.email-container {
   margin-top: 1rem; }
-  .nf-field-container.label-above .nf-field-label {
+  .nf-field-container.textbox-container.label-above .nf-field-label,
+  .nf-field-container.number-container.label-above .nf-field-label,
+  .nf-field-container.textarea-container.label-above .nf-field-label,
+  .nf-field-container.email-container.label-above .nf-field-label {
     position: relative;
     z-index: 2;
     margin: 0;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem; }
-    .nf-field-container.label-above .nf-field-label label {
-      opacity: 0.25; }
-  .nf-field-container.label-above .nf-field-element {
+    padding: 0.25rem 0.5rem; }
+  .nf-field-container.textbox-container.label-above .nf-field-element,
+  .nf-field-container.number-container.label-above .nf-field-element,
+  .nf-field-container.textarea-container.label-above .nf-field-element,
+  .nf-field-container.email-container.label-above .nf-field-element {
     margin-top: -1.5rem; }
-  .nf-field-container .ninja-forms-field {
+  .nf-field-container.textbox-container .ninja-forms-field,
+  .nf-field-container.number-container .ninja-forms-field,
+  .nf-field-container.textarea-container .ninja-forms-field,
+  .nf-field-container.email-container .ninja-forms-field {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -426,13 +476,39 @@ main {
     border: none;
     padding: 1.25rem 0.5rem 1rem;
     font: inherit; }
-    .nf-field-container .ninja-forms-field:focus {
+    .nf-field-container.textbox-container .ninja-forms-field:focus,
+    .nf-field-container.number-container .ninja-forms-field:focus,
+    .nf-field-container.textarea-container .ninja-forms-field:focus,
+    .nf-field-container.email-container .ninja-forms-field:focus {
       outline: none; }
-  .nf-field-container .nf-error-msg {
+  .nf-field-container.textbox-container .nf-error-msg,
+  .nf-field-container.number-container .nf-error-msg,
+  .nf-field-container.textarea-container .nf-error-msg,
+  .nf-field-container.email-container .nf-error-msg {
     font-size: 0.875rem; }
-  .nf-field-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]) {
-    background: #3417AD;
-    color: #fff; }
+  .nf-field-container.textbox-container .submit-wrap,
+  .nf-field-container.number-container .submit-wrap,
+  .nf-field-container.textarea-container .submit-wrap,
+  .nf-field-container.email-container .submit-wrap {
+    margin-top: 3rem; }
+    .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"],
+    .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"],
+    .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"],
+    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"] {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      cursor: pointer; }
+    .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
+    .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
+    .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
+    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]) {
+      background: #3417AD;
+      color: #fff; }
+      .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
+      .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
+      .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
+      .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover {
+        background: #261180; }
 
 .sidebar-items {
   padding-top: 2rem; }

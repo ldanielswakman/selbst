@@ -10,12 +10,18 @@
 $sidebar_width: 33%;
 
 aside {
+	position: relative;
 	flex: 1;
 	flex-basis: $sidebar_width;
 	max-height: 100vh;
 	padding: 2rem;
 	background: $greyDark;
 	color: $white;
+	
+	@include tabletAndUp() {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
 
 	.logo {
 		display: block;
@@ -32,10 +38,30 @@ aside {
 			}
 		}
 	}
-	
-	@include tabletAndUp() {
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
+
+	.toggle-aside {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		padding: 2.5rem 1.5rem 2rem;
+
+		img {
+			width: 2rem;
+			opacity: 0.5;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&:hover img {
+			opacity: 0.8;
+		}
+
+		@include tabletAndUp() {
+			display: none;
+		}
+	}
+	&.isExpanded .toggle-aside img {
+		transform: rotate(180deg);
 	}
 
 	.sidebar__content,
@@ -43,8 +69,13 @@ aside {
 		display: none;
 
 		@include tabletAndUp() {
-			display: block;	
+			display: block;
 		}
+	}
+	&.isExpanded .sidebar__content,
+	&.isExpanded .sidebar__footer {
+		display: block;
+		max-height: auto;
 	}
 
 	// See sidebar-items.scss
@@ -84,8 +115,12 @@ main {
 
 	.main__project-cover-image {
 		flex: 1;
-		min-height: 30vw;
+		min-height: 14rem;
 		background: $yellow;
+
+		@include tabletAndUp() {
+			min-height: 30vw;
+		}
 
 		img {
 			width: 100%;
@@ -120,7 +155,11 @@ main {
 	}
 }
 .home main .main__content {
-	padding: 20rem 2rem 2rem;
+	padding-top: 8rem;
+
+	@include tabletAndUp() {
+		padding: 20rem 2rem 2rem;
+	}
 }
 
 

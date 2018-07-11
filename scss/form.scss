@@ -1,4 +1,24 @@
-.nf-field-container {
+.nf-form-wrap {
+	margin-top: 3rem;
+}
+.nf-field-container.label-above {
+	.nf-field-label label {
+		font-size: 0.875rem;
+		opacity: 0.25;
+	}
+	.nf-field-description {
+		order: 20;
+
+		p {
+			font-size: 1rem;
+			font-family: $sans;
+		}
+	}
+}
+.nf-field-container.textbox-container,
+.nf-field-container.number-container,
+.nf-field-container.textarea-container,
+.nf-field-container.email-container {
 	margin-top: 1rem;
 
 	&.label-above .nf-field-label {
@@ -6,11 +26,6 @@
 		z-index: 2;
 		margin: 0;
 		padding: 0.25rem 0.5rem;
-		font-size: 0.875rem;
-
-		label {
-			opacity: 0.25;
-		}
 	}
 
 	&.label-above .nf-field-element {
@@ -37,10 +52,21 @@
 		font-size: 0.875rem;
 	}
 
-	.submit-wrap .nf-field-element {
-		input[type="button"]:not([disabled]) {
+	.submit-wrap {
+		margin-top: 3rem;
+
+		.nf-field-element input[type="button"] {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			cursor: pointer;
+		}
+		.nf-field-element input[type="button"]:not([disabled]) {
 			background: $blue;
 			color: $white;
+
+			&:hover {
+				background: darken($blue, 10%);
+			}
 		}
 	}
 }

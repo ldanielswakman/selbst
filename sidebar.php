@@ -20,6 +20,10 @@
 		<img src="<?= get_template_directory_uri() ?>/images/selbst-logo.svg" alt="<?= get_bloginfo('name') ?>" />
 	</a>
 
+	<a href="javascript:toggleAside()" class="toggle-aside">
+		<img src="<?= get_template_directory_uri() ?>/images/caret.svg" alt="<?= get_bloginfo('name') ?>" />
+	</a>
+
 	<div class="sidebar__content">
 
 		<blockquote class="sidebar-quote"><p><?= get_post_meta(get_option('page_on_front'))['summary'][0] ?></p></blockquote>
