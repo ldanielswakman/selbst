@@ -18,7 +18,8 @@
 .nf-field-container.textbox-container,
 .nf-field-container.number-container,
 .nf-field-container.textarea-container,
-.nf-field-container.email-container {
+.nf-field-container.email-container,
+.nf-field-container.spam-container  {
 	margin-top: 1rem;
 
 	&.label-above .nf-field-label {

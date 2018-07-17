@@ -482,12 +482,14 @@ main {
 .nf-field-container.textbox-container,
 .nf-field-container.number-container,
 .nf-field-container.textarea-container,
-.nf-field-container.email-container {
+.nf-field-container.email-container,
+.nf-field-container.spam-container {
   margin-top: 1rem; }
   .nf-field-container.textbox-container.label-above .nf-field-label,
   .nf-field-container.number-container.label-above .nf-field-label,
   .nf-field-container.textarea-container.label-above .nf-field-label,
-  .nf-field-container.email-container.label-above .nf-field-label {
+  .nf-field-container.email-container.label-above .nf-field-label,
+  .nf-field-container.spam-container.label-above .nf-field-label {
     position: relative;
     z-index: 2;
     margin: 0;
@@ -495,12 +497,14 @@ main {
   .nf-field-container.textbox-container.label-above .nf-field-element,
   .nf-field-container.number-container.label-above .nf-field-element,
   .nf-field-container.textarea-container.label-above .nf-field-element,
-  .nf-field-container.email-container.label-above .nf-field-element {
+  .nf-field-container.email-container.label-above .nf-field-element,
+  .nf-field-container.spam-container.label-above .nf-field-element {
     margin-top: -1.5rem; }
   .nf-field-container.textbox-container .ninja-forms-field,
   .nf-field-container.number-container .ninja-forms-field,
   .nf-field-container.textarea-container .ninja-forms-field,
-  .nf-field-container.email-container .ninja-forms-field {
+  .nf-field-container.email-container .ninja-forms-field,
+  .nf-field-container.spam-container .ninja-forms-field {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -511,35 +515,41 @@ main {
     .nf-field-container.textbox-container .ninja-forms-field:focus,
     .nf-field-container.number-container .ninja-forms-field:focus,
     .nf-field-container.textarea-container .ninja-forms-field:focus,
-    .nf-field-container.email-container .ninja-forms-field:focus {
+    .nf-field-container.email-container .ninja-forms-field:focus,
+    .nf-field-container.spam-container .ninja-forms-field:focus {
       outline: none; }
   .nf-field-container.textbox-container .nf-error-msg,
   .nf-field-container.number-container .nf-error-msg,
   .nf-field-container.textarea-container .nf-error-msg,
-  .nf-field-container.email-container .nf-error-msg {
+  .nf-field-container.email-container .nf-error-msg,
+  .nf-field-container.spam-container .nf-error-msg {
     font-size: 0.875rem; }
   .nf-field-container.textbox-container .submit-wrap,
   .nf-field-container.number-container .submit-wrap,
   .nf-field-container.textarea-container .submit-wrap,
-  .nf-field-container.email-container .submit-wrap {
+  .nf-field-container.email-container .submit-wrap,
+  .nf-field-container.spam-container .submit-wrap {
     margin-top: 3rem; }
     .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"],
     .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"],
     .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"],
-    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"] {
+    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"],
+    .nf-field-container.spam-container .submit-wrap .nf-field-element input[type="button"] {
       padding-left: 1rem;
       padding-right: 1rem;
       cursor: pointer; }
     .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
     .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
     .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
-    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]) {
+    .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]),
+    .nf-field-container.spam-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]) {
       background: #3417AD;
       color: #fff; }
       .nf-field-container.textbox-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
       .nf-field-container.number-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
       .nf-field-container.textarea-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
-      .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover {
+      .nf-field-container.email-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover,
+      .nf-field-container.spam-container .submit-wrap .nf-field-element input[type="button"]:not([disabled]):hover {
         background: #261180; }
 
 .sidebar-items {
